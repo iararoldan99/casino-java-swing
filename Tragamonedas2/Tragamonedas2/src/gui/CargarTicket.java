@@ -17,9 +17,7 @@ public class CargarTicket extends JFrame {
     public CargarTicket(){
         configurar();
         this.setSize(500, 300);
-//        Casino.getInstancia().asignarTamaño(300, 500);
         this.setVisible(true);
-//        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 
     private void configurar(){

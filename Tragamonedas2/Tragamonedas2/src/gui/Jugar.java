@@ -26,10 +26,8 @@ public class Jugar extends JFrame {
     public Jugar(){
         configurar();
         this.setSize(800, 800);
-
-//        Casino.getInstancia().asignarTamaño(300, 500);
+        this.setBounds(500, 100, 800, 800);
         this.setVisible(true);
-//        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 
     private void configurar(){
@@ -45,7 +43,6 @@ public class Jugar extends JFrame {
         lblCasilla3 = new JLabel(new ImageIcon(getClass().getResource("banana.png"))); //en las comillas va el nombre del archivo de imagen
 
         lblCasilla1.setBounds(30, 400, 100, 100);
-//        lblCasilla1.setPreferredSize(new Dimension(100, 100));
         ManejoBotonesInterna botones = new ManejoBotonesInterna(null);
         btnJugar.addActionListener(botones);
         btnComprobante.addActionListener(botones);
@@ -53,7 +50,6 @@ public class Jugar extends JFrame {
         c.add(new JLabel()); c.add(new JLabel()); c.add(new JLabel());
         c.add(lblTicket); c.add(txtTicket); c.add(btnJugar);
 
-        //c.add(new JLabel()); c.add(new JLabel()); c.add(new JLabel());
         c.add(lblCasilla1); c.add(lblCasilla2); c.add(lblCasilla3);
         c.add(new JLabel()); c.add(btnComprobante); c.add(new JLabel());
         c.add(new JLabel()); c.add(new JLabel()); c.add(new JLabel());
@@ -92,9 +88,8 @@ public class Jugar extends JFrame {
                                 JOptionPane.showMessageDialog(ventana,"Lo sentimos, no ha ganado ningun premio :(");
                             }
                         }
-
                     }else{
-                        JOptionPane.showMessageDialog(ventana,"Lo sentimos, su ticket es inavlido. Intentelo nuevamente.");
+                        JOptionPane.showMessageDialog(ventana,"Lo sentimos, su ticket es inválido. Para obtener número de ticket, compre crédito en la caja.");
                     }
                 }
             }else{

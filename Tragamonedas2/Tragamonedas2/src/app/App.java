@@ -8,10 +8,11 @@ import view.MaquinaTragamonedasView;
 import view.PremioView;
 import view.TicketView;
 
+import java.io.IOException;
 import java.util.Optional;
 
 public class App {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         Principal ventanaPrinicpal = new Principal();
 
@@ -22,9 +23,14 @@ public class App {
         casino.altaPremios("1", new Fruta[]{Fruta.BANANA, Fruta.BANANA, Fruta.BANANA}, 300);
         casino.altaPremios("1", new Fruta[]{Fruta.FRUTILLA, Fruta.FRUTILLA, Fruta.FRUTILLA}, 200);
         casino.altaPremios("1", new Fruta[]{Fruta.PERA, Fruta.PERA, Fruta.PERA}, 100);
-       // casino.altaPremios("1", new Fruta[]{Fruta.PERA, Fruta.FRUTILLA, Fruta.FRUTILLA}, 200);
-        //casino.altaPremios("1", new Fruta[]{Fruta.PERA, Fruta.FRUTILLA, Fruta.BANANA}, 100);
-        //casino.bajaPremios("1", "5");
+        casino.altaPremios("1", new Fruta[]{Fruta.PERA, Fruta.FRUTILLA, Fruta.FRUTILLA}, 200);
+        casino.altaPremios("1", new Fruta[]{Fruta.BANANA, Fruta.FRUTILLA, Fruta.PERA}, 100);
+        casino.altaPremios("1", new Fruta[]{Fruta.BANANA, Fruta.PERA, Fruta.PERA}, 100);
+        casino.altaPremios("1", new Fruta[]{Fruta.PERA, Fruta.PERA, Fruta.BANANA}, 100);
+        casino.altaPremios("1", new Fruta[]{Fruta.FRUTILLA, Fruta.FRUTILLA, Fruta.BANANA}, 100);
+        casino.altaPremios("1", new Fruta[]{Fruta.BANANA, Fruta.FRUTILLA, Fruta.PERA}, 100);
+        casino.altaPremios("1", new Fruta[]{Fruta.FRUTILLA, Fruta.PERA, Fruta.PERA}, 100);
+        casino.altaPremios("1", new Fruta[]{Fruta.PERA, Fruta.BANANA, Fruta.BANANA}, 100);
 
         Caja caja = new Caja(100000);
         casino.setCaja(caja);
